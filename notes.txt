@@ -1,0 +1,7 @@
+The first thing I noticed about the scenarios were the return codes being one step before other steps. It makes more sense for them to be at the end. I also added intermediary steps between votes being cast to make it easier to work with. I also swapped the step that checks if the voter has already voted and put it before the vote received statement.
+
+Assumptions:
+- Each valid vote request contains a vote from one voter for one candidate.
+- To vote for more than one candidate, 2 or 3 requests need to be sent.
+- The vote object is in the format {"voterName": String, "candidateName": String, "nubmerOfVotes": int}
+- The only data stored is the total vote count for each candidate and the number of votes cast by each voter
